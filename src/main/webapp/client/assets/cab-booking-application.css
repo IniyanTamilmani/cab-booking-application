@@ -1,0 +1,1347 @@
+.cab-select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  color: #333;
+  appearance: none;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-caret-down-fill' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14l-4.796-5.481A.5.5 0 0 1 2.5 5h11a.5.5 0 0 1 .39.86l-4.796 5.481a.5.5 0 0 1-.74 0z'/%3E%3C/svg%3E");
+  background-position: right 12px center;
+  background-repeat: no-repeat; }
+  .cab-select:hover {
+    border-color: #aaa; }
+  .cab-select:focus {
+    border-color: #17a528d0;
+    box-shadow: 0 0 5px rgba(15, 222, 53, 0.3); }
+  .cab-select option {
+    padding: 8px;
+    background-color: #fff;
+    color: #333; }
+    .cab-select option:hover {
+      background-color: #f0f0f0; }
+
+.cab-navbar-container {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background-color: #2D3E50;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1; }
+  .cab-navbar-container .cab-navbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%; }
+  .cab-navbar-container .cab-navbar-logo {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #2980B9;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.4s ease-in-out, font-weight 0.3s ease; }
+    .cab-navbar-container .cab-navbar-logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid #2980B9;
+      object-fit: cover; }
+  .cab-navbar-container .cab-navbar_welcome {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 20px; }
+  .cab-navbar-container .cab-navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px; }
+    .cab-navbar-container .cab-navbar-links .cab-navbar__link-item,
+    .cab-navbar-container .cab-navbar-links .cab-navbar__switch-role,
+    .cab-navbar-container .cab-navbar-links .cab-navbar__link {
+      border-radius: 5px;
+      color: white;
+      cursor: pointer; }
+      .cab-navbar-container .cab-navbar-links .cab-navbar__link-item:hover,
+      .cab-navbar-container .cab-navbar-links .cab-navbar__switch-role:hover,
+      .cab-navbar-container .cab-navbar-links .cab-navbar__link:hover {
+        font-weight: bold;
+        color: #2980B9;
+        background-color: #FFFFFF; }
+      .cab-navbar-container .cab-navbar-links .cab-navbar__link-item.active,
+      .cab-navbar-container .cab-navbar-links .cab-navbar__switch-role.active,
+      .cab-navbar-container .cab-navbar-links .cab-navbar__link.active {
+        padding: 2px 10px;
+        color: #FFFFFF;
+        font-weight: bold;
+        background-color: #2980B9; }
+
+.cab-sidebar .cab-sidebar__left-menu .cab-sidebar__menu-item .cab-sidebar__link,
+.cab-sidebar .cab-sidebar__left-menu .cab-sidebar__logout-btn .cab-sidebar__link {
+  cursor: pointer;
+  text-align: left;
+  display: block;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(225, 225, 225, 0.05);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  color: #FFFFFF;
+  text-decoration: none; }
+  .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__menu-item .cab-sidebar__link i,
+  .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__logout-btn .cab-sidebar__link i {
+    margin-right: 4px; }
+  .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__menu-item .cab-sidebar__link.active-route,
+  .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__logout-btn .cab-sidebar__link.active-route {
+    font-weight: bold;
+    background-color: #2980B9;
+    color: #FFFFFF; }
+    .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__menu-item .cab-sidebar__link.active-route a,
+    .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__logout-btn .cab-sidebar__link.active-route a {
+      color: inherit; }
+  .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__menu-item .cab-sidebar__link:hover,
+  .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__logout-btn .cab-sidebar__link:hover {
+    font-weight: bold;
+    background-color: #FFFFFF;
+    color: #2980B9; }
+    .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__menu-item .cab-sidebar__link:hover a,
+    .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__logout-btn .cab-sidebar__link:hover a {
+      color: inherit; }
+
+.cab-sidebar .cab-sidebar__left-menu .cab-sidebar__logout-btn .cab-sidebar__link {
+  background: none;
+  color: #d9534f;
+  font-weight: bold; }
+  .cab-sidebar .cab-sidebar__left-menu .cab-sidebar__logout-btn .cab-sidebar__link:hover {
+    background: #d9534f;
+    color: white; }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9; }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  max-width: 400px; }
+  .modal p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px; }
+  .modal .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+  .modal button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; }
+    .modal button:first-of-type {
+      background-color: #17a528d0;
+      color: #fff;
+      margin-right: 5px; }
+      .modal button:first-of-type:hover {
+        background-color: #069617ec; }
+    .modal button:last-of-type {
+      background-color: #d9534f;
+      color: #fff; }
+      .modal button:last-of-type:hover {
+        background-color: #c9302c; }
+
+.alert-message {
+  position: fixed;
+  top: 82px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  color: #e63946;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 11;
+  text-align: center;
+  max-width: 500px; }
+
+.cab-user-home {
+  display: contents; }
+  .cab-user-home .cab-content-area {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+  .cab-user-home .cab-book-page {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 400px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 100px;
+    background-color: white; }
+    .cab-user-home .cab-book-page:hover {
+      transform: scale(1.02); }
+  .cab-user-home .slogan {
+    font-size: 1.5em;
+    color: #069617ec;
+    margin-bottom: 15px;
+    font-weight: 600; }
+  .cab-user-home .cab-form-group {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .cab-user-home .cab-form-item {
+    margin-bottom: 15px;
+    text-align: left; }
+  .cab-user-home .cab-label {
+    display: block;
+    font-size: 1em;
+    color: #333333;
+    margin-bottom: 6px; }
+  .cab-user-home .cab-select,
+  .cab-user-home .cab-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9em;
+    color: #555555;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease; }
+    .cab-user-home .cab-select:focus,
+    .cab-user-home .cab-input:focus {
+      border-color: #069617ec;
+      outline: none; }
+  .cab-user-home .cab-submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #17a528d0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; }
+    .cab-user-home .cab-submit-btn:hover {
+      background-color: #069617ec; }
+  .cab-user-home .error-message {
+    color: #f44336;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-left: 5px;
+    font-size: 12px; }
+  .cab-user-home .cab-back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #17a528d0;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; }
+    .cab-user-home .cab-back-btn:hover {
+      background-color: #069617ec; }
+
+.cab-data-table-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; }
+  .cab-data-table-wrapper .cab-data-table-container {
+    width: 80%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif; }
+    .cab-data-table-wrapper .cab-data-table-container .cab-data-table {
+      width: 100%;
+      border-collapse: collapse; }
+      .cab-data-table-wrapper .cab-data-table-container .cab-data-table thead .cab-data-table-header {
+        background-color: #007bff;
+        color: #ffffff; }
+      .cab-data-table-wrapper .cab-data-table-container .cab-data-table thead .cab-data-table-header-cell {
+        padding: 10px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 14px; }
+      .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody {
+        display: block;
+        max-height: 300px;
+        overflow-y: auto; }
+        .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row {
+          display: table;
+          width: 100%;
+          table-layout: fixed;
+          font-size: 14px; }
+          .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row:nth-child(even) {
+            background-color: #f9f9f9; }
+          .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row:nth-child(odd) {
+            background-color: #ffffff; }
+          .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-cell,
+          .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-action-cell {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd; }
+    .cab-data-table-wrapper .cab-data-table-container .cab-action-button {
+      padding: 6px 12px;
+      margin-right: 5px;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; }
+      .cab-data-table-wrapper .cab-data-table-container .cab-action-button.primary {
+        background: #17a528d0; }
+        .cab-data-table-wrapper .cab-data-table-container .cab-action-button.primary:hover {
+          background-color: #069617ec; }
+      .cab-data-table-wrapper .cab-data-table-container .cab-action-button.secondary {
+        background-color: #d9534f; }
+        .cab-data-table-wrapper .cab-data-table-container .cab-action-button.secondary:hover {
+          background-color: #c9302c; }
+
+.cab-data-table-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white; }
+  .cab-data-table-wrapper .cab-data-table-container {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px; }
+    .cab-data-table-wrapper .cab-data-table-container .cab-data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center; }
+      .cab-data-table-wrapper .cab-data-table-container .cab-data-table thead .cab-data-table-header {
+        background-color: #007bff;
+        color: #432424;
+        display: table;
+        width: 100%;
+        table-layout: fixed; }
+        .cab-data-table-wrapper .cab-data-table-container .cab-data-table thead .cab-data-table-header .cab-data-table-header-cell {
+          padding: 12px;
+          font-weight: bold;
+          text-align: center; }
+      .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody {
+        display: block;
+        max-height: 400px;
+        overflow-y: auto;
+        width: 100%; }
+        .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row {
+          display: table;
+          width: 100%;
+          table-layout: fixed; }
+          .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row:nth-child(even) {
+            background-color: #f9f9f9; }
+          .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-cell,
+          .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .reported-status {
+            padding: 1px;
+            text-align: center; }
+          .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-action-cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; }
+            .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-action-cell .cab-action-button {
+              padding: 6px 10px;
+              font-size: 1em;
+              flex-shrink: 1;
+              max-width: 100px; }
+              .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-action-cell .cab-action-button.primary {
+                background: #17a528d0; }
+                .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-action-cell .cab-action-button.primary:hover {
+                  background-color: #069617ec; }
+              .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-action-cell .cab-action-button.secondary {
+                background-color: #d9534f; }
+                .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-action-cell .cab-action-button.secondary:hover {
+                  background-color: #c9302c; }
+      .cab-data-table-wrapper .cab-data-table-container .cab-data-table tfoot {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        background-color: #f1f1f1; }
+        .cab-data-table-wrapper .cab-data-table-container .cab-data-table tfoot .cab-data-table-footer-cell {
+          padding: 12px;
+          font-weight: bold;
+          text-align: center; }
+    .cab-data-table-wrapper .cab-data-table-container .reported-status {
+      color: #6c757d;
+      font-weight: bold;
+      font-size: 15px; }
+
+.cab-data-table-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden; }
+  .cab-data-table-wrapper .cab-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; }
+    .cab-data-table-wrapper .cab-data-table .cab-data-table-header-cell,
+    .cab-data-table-wrapper .cab-data-table .cab-data-table-cell {
+      padding: 8px 12px;
+      text-align: center;
+      vertical-align: middle;
+      border-bottom: 1px solid #ddd;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 40px;
+      box-sizing: border-box; }
+      .cab-data-table-wrapper .cab-data-table .cab-data-table-header-cell.cab-data-table-header-cell,
+      .cab-data-table-wrapper .cab-data-table .cab-data-table-cell.cab-data-table-header-cell {
+        background-color: #f4f4f4;
+        font-weight: bold;
+        position: sticky;
+        top: 0; }
+    .cab-data-table-wrapper .cab-data-table .cab-data-table-action-cell {
+      border-bottom: 1px solid #ddd;
+      padding: 8px 12px;
+      text-align: center;
+      vertical-align: middle; }
+  .cab-data-table-wrapper .cab-data-table-body-container {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 400px;
+    display: block; }
+  .cab-data-table-wrapper .cab-action-button {
+    padding: 6px 12px;
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s; }
+    .cab-data-table-wrapper .cab-action-button.primary {
+      background: #17a528d0; }
+      .cab-data-table-wrapper .cab-action-button.primary:hover {
+        background-color: #069617ec; }
+    .cab-data-table-wrapper .cab-action-button.secondary {
+      background-color: #d9534f; }
+      .cab-data-table-wrapper .cab-action-button.secondary:hover {
+        background-color: #c9302c; }
+
+.auth-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: #2C3E50;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; }
+  .auth-links .auth-logo {
+    display: flex;
+    margin-right: auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    align-items: center; }
+    .auth-links .auth-logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid #2980B9;
+      object-fit: cover; }
+    .auth-links .auth-logo .auth-logo-link {
+      color: #2980B9;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 30px; }
+  .auth-links .auth-links-container {
+    display: flex;
+    justify-content: space-around;
+    width: 300px; }
+    .auth-links .auth-links-container .auth-link-item .auth-link {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s; }
+      .auth-links .auth-links-container .auth-link-item .auth-link:hover {
+        color: #2980B9; }
+      .auth-links .auth-links-container .auth-link-item .auth-link.active {
+        color: #FFFFFF;
+        background-color: #2980B9;
+        padding: 5px 10px;
+        border-radius: 5px; }
+
+.taxi-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #bde0d6; }
+  .taxi-container .homepage-content {
+    height: calc(100vh - 80px);
+    width: 100%;
+    margin-top: 80px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; }
+    .taxi-container .homepage-content .hero-section {
+      text-align: center;
+      margin-bottom: 40px; }
+      .taxi-container .homepage-content .hero-section h1 {
+        font-size: 2.5em;
+        color: #2C3E50;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); }
+      .taxi-container .homepage-content .hero-section p {
+        font-size: 1.2em;
+        color: #34495E;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px 15px;
+        border-radius: 8px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; }
+      .taxi-container .homepage-content .hero-section .alternative-btn {
+        display: inline-block;
+        background-color: #FFD700;
+        color: #34495E;
+        border: 2px solid #FFD700;
+        border-radius: 50px;
+        padding: 12px 24px;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease; }
+        .taxi-container .homepage-content .hero-section .alternative-btn:hover {
+          background-color: #2980B9;
+          color: #FFFFFF;
+          border-color: #2980B9;
+          transform: scale(1.05); }
+    .taxi-container .homepage-content .features-section {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto; }
+      .taxi-container .homepage-content .features-section .feature-item {
+        flex: 1;
+        margin: 10px;
+        text-align: center;
+        padding: 20px;
+        background-color: #F8F9FA;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s; }
+        .taxi-container .homepage-content .features-section .feature-item h3 {
+          color: #2980B9;
+          margin-bottom: 10px; }
+        .taxi-container .homepage-content .features-section .feature-item p {
+          color: #34495E; }
+        .taxi-container .homepage-content .features-section .feature-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+
+.cab-login-page {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  background-color: #bde0d6; }
+
+.cab-login-content {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center; }
+
+.cab-login-form-container .cab-welcome-container {
+  margin-bottom: 20px; }
+  .cab-login-form-container .cab-welcome-container .cab-title {
+    font-size: 1.8em;
+    color: #2C3E50;
+    margin-bottom: 10px; }
+  .cab-login-form-container .cab-welcome-container .cab-message {
+    color: black;
+    font-size: 1em; }
+
+.cab-login-form-container .cab-login-form {
+  display: flex;
+  flex-direction: column; }
+  .cab-login-form-container .cab-login-form .cab-input-group {
+    margin-bottom: 20px;
+    text-align: left; }
+    .cab-login-form-container .cab-login-form .cab-input-group label {
+      font-weight: 600;
+      color: #2C3E50;
+      display: block;
+      margin-bottom: 5px; }
+    .cab-login-form-container .cab-login-form .cab-input-group .cab-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #2C3E50;
+      border-radius: 4px;
+      font-size: 1em;
+      color: #34495E;
+      box-sizing: border-box; }
+      .cab-login-form-container .cab-login-form .cab-input-group .cab-input:focus {
+        border-color: #2980B9;
+        outline: none; }
+  .cab-login-form-container .cab-login-form .cab-btn-generic {
+    padding: 12px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #2C3E50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; }
+    .cab-login-form-container .cab-login-form .cab-btn-generic:hover {
+      background-color: #3e5871; }
+
+.cab-login-form-container .cab-signup-link {
+  margin-top: 20px; }
+  .cab-login-form-container .cab-signup-link a {
+    color: #2980B9;
+    font-weight: 600;
+    text-decoration: none; }
+    .cab-login-form-container .cab-signup-link a:hover {
+      text-decoration: underline; }
+
+.cab-login-form-container .error-message {
+  color: #E74C3C;
+  border-radius: 5px;
+  padding-left: 5px;
+  font-size: 12px; }
+
+.cab-signup-page {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  background-color: #bde0d6; }
+  .cab-signup-page .cab-signup-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center; }
+  .cab-signup-page .cab-signup-form-container .cab-welcome-container {
+    margin-bottom: 20px; }
+    .cab-signup-page .cab-signup-form-container .cab-welcome-container .cab-title {
+      font-size: 1.8em;
+      color: #2C3E50;
+      margin-bottom: 10px; }
+    .cab-signup-page .cab-signup-form-container .cab-welcome-container .cab-message {
+      color: #34495E;
+      font-size: 1em; }
+  .cab-signup-page .cab-signup-form-container .cab-signup-form {
+    display: flex;
+    flex-direction: column; }
+    .cab-signup-page .cab-signup-form-container .cab-signup-form .cab-input-group {
+      margin-bottom: 15px; }
+      .cab-signup-page .cab-signup-form-container .cab-signup-form .cab-input-group label {
+        font-weight: 600;
+        color: #34495E;
+        display: block;
+        margin-bottom: 5px;
+        text-align: left; }
+      .cab-signup-page .cab-signup-form-container .cab-signup-form .cab-input-group .cab-input {
+        padding: 10px;
+        border: 1px solid #ECF0F1;
+        border-radius: 4px;
+        font-size: 0.9em;
+        color: #34495E;
+        background-color: #FFFFFF;
+        width: 100%;
+        border: 1px solid #2C3E50; }
+        .cab-signup-page .cab-signup-form-container .cab-signup-form .cab-input-group .cab-input:focus {
+          border-color: #2980B9;
+          outline: none; }
+    .cab-signup-page .cab-signup-form-container .cab-signup-form .cab-btn-generic {
+      padding: 10px;
+      font-size: 1em;
+      font-weight: 600;
+      color: #FFFFFF;
+      background-color: #2C3E50;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s; }
+      .cab-signup-page .cab-signup-form-container .cab-signup-form .cab-btn-generic:hover {
+        background-color: #3e5871; }
+  .cab-signup-page .cab-signup-form-container .cab-login-link {
+    margin-top: 20px; }
+    .cab-signup-page .cab-signup-form-container .cab-login-link a {
+      color: #2980B9;
+      font-weight: 600;
+      text-decoration: none; }
+      .cab-signup-page .cab-signup-form-container .cab-login-link a:hover {
+        text-decoration: underline; }
+  .cab-signup-page .cab-signup-form-container .error-message {
+    color: #E74C3C;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 12px;
+    text-align: left; }
+
+.company-signup-page {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  background-color: #bde0d6; }
+  .company-signup-page .company-signup-content {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 40px; }
+  .company-signup-page .company-signup-form-container {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .company-signup-page .company-signup-form-container .company-welcome-container {
+      margin-bottom: 20px; }
+      .company-signup-page .company-signup-form-container .company-welcome-container .company-title {
+        font-size: 2em;
+        color: #2C3E50;
+        margin-bottom: 10px; }
+      .company-signup-page .company-signup-form-container .company-welcome-container .company-message {
+        color: black;
+        font-size: 1.1em; }
+    .company-signup-page .company-signup-form-container .company-signup-form {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      max-height: 400px;
+      margin-top: 20px; }
+      .company-signup-page .company-signup-form-container .company-signup-form .company-input-group {
+        margin-bottom: 16px;
+        text-align: left; }
+        .company-signup-page .company-signup-form-container .company-signup-form .company-input-group label {
+          font-weight: 600;
+          color: #2C3E50;
+          display: block;
+          margin-bottom: 5px; }
+        .company-signup-page .company-signup-form-container .company-signup-form .company-input-group .company-input,
+        .company-signup-page .company-signup-form-container .company-signup-form .company-input-group .company-textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #2C3E50;
+          border-radius: 4px;
+          font-size: 0.9em;
+          color: #34495E;
+          box-sizing: border-box;
+          margin-bottom: 8px; }
+          .company-signup-page .company-signup-form-container .company-signup-form .company-input-group .company-input:focus,
+          .company-signup-page .company-signup-form-container .company-signup-form .company-input-group .company-textarea:focus {
+            border-color: #2980B9;
+            outline: none; }
+        .company-signup-page .company-signup-form-container .company-signup-form .company-input-group .company-textarea {
+          height: 120px;
+          resize: vertical; }
+      .company-signup-page .company-signup-form-container .company-signup-form .company-btn-generic {
+        padding: 12px;
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #FFFFFF;
+        background-color: #2C3E50;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s; }
+        .company-signup-page .company-signup-form-container .company-signup-form .company-btn-generic:hover {
+          background-color: #3e5871; }
+    .company-signup-page .company-signup-form-container .company-login-link {
+      margin-top: 20px; }
+      .company-signup-page .company-signup-form-container .company-login-link a {
+        color: #2980B9;
+        font-weight: 600;
+        text-decoration: none; }
+        .company-signup-page .company-signup-form-container .company-login-link a:hover {
+          text-decoration: underline; }
+    .company-signup-page .company-signup-form-container .error-message {
+      color: #E74C3C;
+      border-radius: 5px;
+      padding-left: 5px;
+      font-size: 12px;
+      text-align: left; }
+
+.cab-ride-details-table {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  .cab-ride-details-table table {
+    width: 100%;
+    border-collapse: collapse; }
+    .cab-ride-details-table table td {
+      padding: 12px;
+      vertical-align: middle;
+      border-bottom: 1px solid #ddd;
+      white-space: nowrap; }
+      .cab-ride-details-table table td:first-child {
+        font-weight: bold;
+        color: #333;
+        text-align: left;
+        padding-right: 15px;
+        width: 35%; }
+      .cab-ride-details-table table td:last-child {
+        width: 65%;
+        text-align: left; }
+    .cab-ride-details-table table .otp-row .error-message {
+      font-size: 0.9em;
+      color: #e63946;
+      flex-shrink: 0; }
+    .cab-ride-details-table table .otp-row #otp-input {
+      flex-grow: 1;
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box; }
+    .cab-ride-details-table table .action-cell {
+      text-align: center;
+      padding-top: 15px; }
+      .cab-ride-details-table table .action-cell button {
+        padding: 8px 16px;
+        background-color: #d9534f;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s; }
+        .cab-ride-details-table table .action-cell button:hover {
+          background-color: #c9302c; }
+        .cab-ride-details-table table .action-cell button:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.3); }
+        .cab-ride-details-table table .action-cell button:disabled {
+          background-color: #ddd;
+          cursor: not-allowed; }
+      .cab-ride-details-table table .action-cell .cab-action-button.primary {
+        background-color: #28a745;
+        color: white; }
+        .cab-ride-details-table table .action-cell .cab-action-button.primary:hover {
+          background-color: #218838; }
+        .cab-ride-details-table table .action-cell .cab-action-button.primary:focus {
+          box-shadow: 0 0 0 1px rgba(40, 167, 69, 0.3); }
+        .cab-ride-details-table table .action-cell .cab-action-button.primary:disabled {
+          background-color: #ddd;
+          color: #6c757d; }
+
+.cab-driver-home {
+  display: contents; }
+  .cab-driver-home .cab-content-area {
+    margin-left: 220px;
+    flex-grow: 1;
+    height: calc(100vh - 80px);
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    position: relative; }
+    .cab-driver-home .cab-content-area .cab-location-container {
+      width: 100%;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 5px;
+      z-index: 1; }
+      .cab-driver-home .cab-content-area .cab-location-container .cab-input {
+        margin-right: 10px; }
+      .cab-driver-home .cab-content-area .cab-location-container .cab-action-button {
+        margin-left: 5px;
+        padding: 4px 16px;
+        background-color: #17a528d0;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer; }
+        .cab-driver-home .cab-content-area .cab-location-container .cab-action-button:hover {
+          background-color: #17a528; }
+    .cab-driver-home .cab-content-area .cab-content-container {
+      width: 100%;
+      height: 100%;
+      margin-top: auto;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .cab-driver-home .cab-content-area .cab-content-container .error {
+        padding: 20px;
+        color: red;
+        background-color: white;
+        font-size: 1.2em;
+        text-align: center;
+        max-width: 80%;
+        border: 1px solid #f44336;
+        border-radius: 5px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); }
+    .cab-driver-home .cab-content-area .cab-child-link {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px; }
+
+.cab-result-container {
+  position: relative; }
+  .cab-result-container .cab-back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; }
+    .cab-result-container .cab-back-btn:hover {
+      background-color: #45a049; }
+
+.cab-content-area {
+  background-color: #f8f9fc;
+  flex-grow: 1;
+  margin-left: 200px;
+  padding: 20px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+  overflow-y: auto; }
+  .cab-content-area .form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    .cab-content-area .form-container .form-container-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #17a528d0;
+      margin-bottom: 20px;
+      text-align: center; }
+    .cab-content-area .form-container form .form-group {
+      margin-bottom: 15px; }
+      .cab-content-area .form-container form .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #333; }
+      .cab-content-area .form-container form .form-group .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-size: 0.9em;
+        color: #555;
+        background-color: #fafafa;
+        transition: border-color 0.3s ease; }
+        .cab-content-area .form-container form .form-group .form-control:focus {
+          border-color: #007bff;
+          outline: none; }
+    .cab-content-area .form-container form .btn {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1em;
+      font-weight: 600;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; }
+      .cab-content-area .form-container form .btn.btn-primary {
+        background-color: #17a528d0; }
+        .cab-content-area .form-container form .btn.btn-primary:hover {
+          background-color: #069617ec; }
+      .cab-content-area .form-container form .btn.btn-secondary {
+        background-color: #d9534f;
+        margin-top: 5px; }
+        .cab-content-area .form-container form .btn.btn-secondary:hover {
+          background-color: #c9302c; }
+  .cab-content-area .error-message {
+    color: #f44336;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 12px; }
+
+.cab-currentBooking-page {
+  display: contents; }
+  .cab-currentBooking-page .cab-content-area {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+
+.cab-history-page {
+  display: contents; }
+  .cab-history-page .cab-content-area {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+  .cab-history-page .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10; }
+  .cab-history-page .report-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 11; }
+    .cab-history-page .report-modal h3 {
+      text-align: center;
+      margin-bottom: 16px; }
+    .cab-history-page .report-modal label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold; }
+    .cab-history-page .report-modal input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 16px; }
+    .cab-history-page .report-modal .modal-actions {
+      display: flex;
+      justify-content: space-between; }
+      .cab-history-page .report-modal .modal-actions button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease; }
+        .cab-history-page .report-modal .modal-actions button:first-child {
+          background-color: #17a528d0;
+          color: #fff; }
+          .cab-history-page .report-modal .modal-actions button:first-child:hover {
+            background-color: #069617ec; }
+        .cab-history-page .report-modal .modal-actions button:last-child {
+          background-color: #dc3545;
+          color: #fff; }
+          .cab-history-page .report-modal .modal-actions button:last-child:hover {
+            background-color: #c82333; }
+
+.cab-profile-page {
+  display: contents; }
+  .cab-profile-page .cab-content-area {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+
+.cab-profile-form {
+  width: 40%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .cab-profile-form .error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: center; }
+  .cab-profile-form .cab-form-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+    padding-left: 10px; }
+    .cab-profile-form .cab-form-group label {
+      width: 40%;
+      font-weight: bold;
+      color: #333333;
+      text-align: left;
+      margin-right: 10px;
+      font-size: 20px; }
+    .cab-profile-form .cab-form-group input[type="text"] {
+      width: 55%;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+      font-size: 20px; }
+  .cab-profile-form .cab-action-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    margin: 15px auto 0;
+    display: block; }
+    .cab-profile-form .cab-action-button.primary {
+      background-color: #17a528d0; }
+      .cab-profile-form .cab-action-button.primary:hover {
+        background-color: #069617ec; }
+    .cab-profile-form .cab-action-button.secondary {
+      background-color: #d9534f;
+      margin-top: 5px; }
+      .cab-profile-form .cab-action-button.secondary:hover {
+        background-color: #c9302c; }
+
+.cab-company-details-page {
+  display: contents; }
+  .cab-company-details-page .cab-content-area {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+
+.not-found-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f2f2f2; }
+  .not-found-message h1 {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin: 0; }
+  .not-found-message p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+    max-width: 500px;
+    line-height: 1.6;
+    padding: 0 15px; }
+
+.cab-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+  .cab-dashboard-container .navbar {
+    height: 80px;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10; }
+  .cab-dashboard-container .content {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 80px); }
+  .cab-dashboard-container .left, .cab-dashboard-container .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; }
+  .cab-dashboard-container .left img {
+    width: 100%;
+    max-width: 100%; }
+  .cab-dashboard-container .right {
+    padding: 20px;
+    background-color: #f4f4f4; }
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box; }
+
+body, input {
+  font-family: 'Times New Roman', Times, serif; }
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.cab-content-area {
+  background-color: #bde0d6; }
+
+.taxi-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+.cab-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: #f8f9fa;
+  z-index: 1; }
+
+.cab-display-area {
+  background-color: #f8f9fc;
+  display: flex;
+  margin-top: 80px;
+  height: calc(100vh - 80px); }
+
+.cab-side-bar {
+  width: 220px;
+  height: calc(100vh - 80px);
+  background-color: #2D3E50;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  color: white;
+  z-index: 1; }
+
+.cab-content-area {
+  flex-grow: 1;
+  margin-left: 220px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+  overflow-y: auto; }
+  .cab-content-area .cab-error-message {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: white; }
+  .cab-content-area .cab-booking-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; }
+
+.cab-results-container {
+  padding: 10px;
+  border-radius: 8px; }
+
+.cab-results-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px; }
+
+.cab-back-btn {
+  padding: 8px 16px;
+  background-color: #00ff44;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s; }
+  .cab-back-btn:hover {
+    background-color: #00b368; }
+
+.cab-results-table {
+  margin-top: 5px; }
+
+.cab-error-message {
+  background-color: #f8d7da;
+  color: red;
+  border: 1px solid #ede7e7;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin: 10px 0;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+
+.cab-results-table .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-action-cell .cab-action-button.secondary {
+  background-color: #17a528d0; }
+  .cab-results-table .cab-data-table-wrapper .cab-data-table-container .cab-data-table tbody .cab-data-table-row .cab-data-table-action-cell .cab-action-button.secondary:hover {
+    background-color: #069617ec; }
+
+/*# sourceMappingURL=cab-booking-application.css.map */
